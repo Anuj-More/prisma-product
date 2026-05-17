@@ -1,14 +1,13 @@
 services:
-  mysql:
-    image: mysql
-    environment:
-      MYSQL_DATABASE: nestjs_prisma_product_tutorial
-      MYSQL_ROOT_PASSWORD: password
-    ports:
-      - 3306:3306
-    volumes:
-      - prisma_mysql_tut:/var/lib/mysql
+    mysql:
+        image: mysql
+        environment:
+            MYSQL_DATABASE: nestjs_prisma_product_tutorial
+            MYSQL_ROOT_PASSWORD: password
+        ports:
+            - 3306:3306
+        volumes:
+            - prisma_mysql_tut:/var/lib/mysql
 
 volumes:
-  prisma_mysql_tut:
-  
+    prisma_mysql_tut:

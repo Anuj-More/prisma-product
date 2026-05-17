@@ -5,8 +5,8 @@ import { DatabaseModule } from './database/database.module';
 import { ProductModule } from './product/product.module';
 
 @Module({
-  imports: [DatabaseModule, ProductModule],
-  controllers: [AppController],
-  providers: [AppService],
+    imports: [DatabaseModule, ProductModule],
+    controllers: [AppController],
+    providers: [AppService],
 })
 export class AppModule {}
