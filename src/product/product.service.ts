@@ -9,8 +9,12 @@ import {
 export class ProductService {
     constructor(private readonly dbService: DatabaseService) {}
 
-    create(productCreateInput: ProductCreateInput) {
-        return 'This action adds a new product';
+    async create(productCreateInput: ProductCreateInput) {
+        const product = await this.dbService.product.create({
+            data: {
+                ...productCreateInput
+            }
+        })
     }
 
     findAll() {
