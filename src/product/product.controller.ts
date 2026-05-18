@@ -7,11 +7,11 @@ import {
     Param,
     Delete,
 } from '@nestjs/common';
-import { ProductService } from './product.service';
+import { ProductService } from './product.service.js';
 import type {
     ProductCreateInput,
     ProductUpdateInput,
-} from '../generated/prisma/models';
+} from '../generated/prisma/models.js';
 
 @Controller('product')
 export class ProductController {

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { DatabaseService } from '../database/database.service';
+import { DatabaseService } from '../database/database.service.js';
 import {
     ProductCreateInput,
     ProductUpdateInput,
-} from '../generated/prisma/models';
+} from '../generated/prisma/models.js';
 
 @Injectable()
 export class ProductService {
