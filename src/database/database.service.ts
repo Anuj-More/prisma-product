@@ -1,13 +1,7 @@
-import {
-    Global,
-    Injectable,
-    OnModuleDestroy,
-    OnModuleInit,
-} from '@nestjs/common';
+import { Injectable, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
 import { PrismaClient } from '../generated/prisma/client.js';
 import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 
-@Global()
 @Injectable()
 export class DatabaseService
     extends PrismaClient
