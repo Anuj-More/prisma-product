@@ -15,18 +15,27 @@ export class ProductService {
                 ...productCreateInput
             }
         })
+        return product;
     }
 
-    findAll() {
-        return `This action returns all product`;
+    async findAll() {
+        const product = await this.dbService.product.findMany();
+        return product;
     }
 
-    findOne(id: number) {
-        return `This action returns a #${id} product`;
+    async findOne(id: number) {
+        const product = await this.dbService.product.findUnique({
+            where: {id}
+        })
+        return product;
     }
 
-    update(id: number, updateProductDto: ProductUpdateInput) {
-        return `This action updates a #${id} product`;
+    async update(id: number, updateProductDto: ProductUpdateInput) {
+        const product = await this.dbService.product.update({
+            data: { ...updateProductDto },
+            where: {id}
+        });
+         return product;
     }
 
     remove(id: number) {
